@@ -12,11 +12,13 @@ public class Device {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+    private String gatewayName;
 
 
-    public Device(Long id, String name) {
+    public Device(Long id, String name, String gateName) {
         this.id = id;
         this.name = name;
+        this.gatewayName = gateName;
     }
 
     public Device() {
@@ -37,6 +39,14 @@ public class Device {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getGatewayName() {
+        return gatewayName;
+    }
+
+    public void setGatewayName(String gateName) {
+        this.name = gateName;
     }
 
     @Override
