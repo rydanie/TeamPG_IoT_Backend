@@ -42,7 +42,7 @@ public class DeviceController {
         return deviceService.getDevices()
                //these are methods contained within the object
                 .stream()
-                .map(device -> new DeviceDto(device.getId(), device.getName()))
+                .map(device -> new DeviceDto(device.getId(), device.getName(), device.getGatewayName()))
                 //this is just the stuff it is returning
                 .collect(Collectors.toList());
     }
