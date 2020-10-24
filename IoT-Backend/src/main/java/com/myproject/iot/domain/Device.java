@@ -5,19 +5,22 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+//this tells the program this is a thing
 @Entity
 public class Device {
 
+    //when its looking for id it goes here
     @Id
+    //tells generated value to do stuff here
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private String name;
+    private long devMacAddr;
+    private String deviceName;
     private String gatewayName;
 
 
-    public Device(Long id, String name, String gateName) {
-        this.id = id;
-        this.name = name;
+    public Device(long macAdd, String deviceName, String gateName) {
+        this.devMacAddr = macAdd;
+        this.deviceName = deviceName;
         this.gatewayName = gateName;
     }
 
@@ -25,20 +28,23 @@ public class Device {
 
     }
 
-    public Long getId() {
-        return id;
+    //FRONTEND STUFF BELOW
+    //this is all fun/useful stuff
+    //it gets/sets all the info
+    public long getDevMacAdd() {
+        return devMacAddr;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setDevMacAdd(long macAdd) {
+        this.devMacAddr = macAdd;
     }
 
-    public String getName() {
-        return name;
+    public String getDeviceName() {
+        return deviceName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDeviceName(String name) {
+        this.deviceName = name;
     }
 
     public String getGatewayName() {
@@ -46,14 +52,15 @@ public class Device {
     }
 
     public void setGatewayName(String gateName) {
-        this.name = gateName;
+        this.gatewayName = gateName;
     }
 
     @Override
     public String toString() {
         return "Device{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+                "MacAddress=" + devMacAddr +
+                ", device name='" + deviceName +
+                ", gateway connected to='" + gatewayName+ '\''
+                + '}';
     }
 }
