@@ -2,30 +2,32 @@ package com.myproject.iot.dto;
 
 public class DeviceDto {
 
-    private long id;
-    private String name;
+    private long macAddress;
+    private String deviceName;
+    private String gatewayName;
 
     public DeviceDto() {
     }
 
-    public DeviceDto(long id, String name) {
-        this.id = id;
-        this.name = name;
+    public DeviceDto(long id, String name, String gateName) {
+        this.macAddress = id;
+        this.deviceName = name;
+        this.gatewayName = gateName;
     }
 
     public long getId() {
-        return id;
+        return macAddress;
     }
 
     public void setId(long id) {
-        this.id = id;
+        this.macAddress = id;
     }
 
     public String getName() {
-        return name;
+        return deviceName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.deviceName = name;
     }
 }
