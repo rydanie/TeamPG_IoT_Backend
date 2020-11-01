@@ -15,11 +15,18 @@ public class DeviceService {
 
     public Device addDevice(String name) {
         Device device = new Device();
-        device.setName(name);
+        device.setDeviceName(name);
         return deviceRepository.save(device);
     }
 
     public List<Device> getDevices() {
         return deviceRepository.findAll();
     }
+
+    /*This is where we should be deleting bu the other one works
+    public void deleteDevice(Long deleteId){
+        Device device = deviceRepository.getOne(deleteId);
+        deviceRepository.delete(device);
+    }
+     */
 }
