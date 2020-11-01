@@ -1,14 +1,11 @@
 package com.myproject.iot.controller;
 
 //this imports eveything we need
-import com.myproject.iot.domain.Device;
 import com.myproject.iot.domain.Gateway;
-import com.myproject.iot.dto.CreateDevicePayload;
 import com.myproject.iot.dto.CreateGatewayPayload;
-import com.myproject.iot.dto.DeviceDto;
 import com.myproject.iot.dto.GatewayDto;
-import com.myproject.iot.repository.GatewayRepository;
 import com.myproject.iot.service.GatewayService;
+import com.myproject.iot.repository.GatewayRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,9 +26,6 @@ public class GatewayController {
     private GatewayService gatewayService;
     private GatewayRepository gatewayRepository;
 
-   /*@Autowired
-    private DeviceRepository deviceRepository;
-     */
 
     //maps HTTP POST requests onto specific handlers
     @PostMapping("/")
