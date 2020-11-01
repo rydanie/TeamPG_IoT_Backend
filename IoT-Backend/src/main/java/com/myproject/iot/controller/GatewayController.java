@@ -7,6 +7,7 @@ import com.myproject.iot.dto.CreateDevicePayload;
 import com.myproject.iot.dto.CreateGatewayPayload;
 import com.myproject.iot.dto.DeviceDto;
 import com.myproject.iot.dto.GatewayDto;
+import com.myproject.iot.repository.GatewayRepository;
 import com.myproject.iot.service.GatewayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,6 +27,7 @@ public class GatewayController {
     //this enables us to implicitly inject object dependency
     @Autowired//this is a best practice thing, seperates buieness function from server functions
     private GatewayService gatewayService;
+    private GatewayRepository gatewayRepository;
 
    /*@Autowired
     private DeviceRepository deviceRepository;
@@ -50,7 +52,14 @@ public class GatewayController {
                 .stream()
                 .map(gateway -> new GatewayDto(gateway.getGateMacAddress(),
                         gateway.getIPAddress(), gateway.getGatewayName()))
-                //this is just the stuff it is returning
+                //this just gathers all the stuff to display it
                 .collect(Collectors.toList());
     }
+
+    //when told to delete something it goes here
+    @DeleteMapping("")
+    public void delete(@RequestParam(name = "id") Long id) {
+        gatewayRepository.deleteById(id);
+    }
+
 }
