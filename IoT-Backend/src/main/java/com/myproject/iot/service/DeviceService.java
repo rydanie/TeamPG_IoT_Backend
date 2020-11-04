@@ -15,7 +15,7 @@ public class DeviceService {
 
     public Device addDevice(String name) {
         Device device = new Device();
-        device.setDeviceName(name);
+        device.setName(name);
         return deviceRepository.save(device);
     }
 

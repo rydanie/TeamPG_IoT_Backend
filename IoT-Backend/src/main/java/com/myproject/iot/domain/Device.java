@@ -13,14 +13,14 @@ public class Device {
     @Id
     //tells generated value to do stuff here
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long devMacAddr;
-    private String deviceName;
+    private long id;
+    private String name;
     private String gatewayName;
 
 
-    public Device(long macAdd, String deviceName, String gateName) {
-        this.devMacAddr = macAdd;
-        this.deviceName = deviceName;
+    public Device(long id, String name, String gateName) {
+        this.id = id;
+        this.name = name;
         this.gatewayName = gateName;
     }
 
@@ -31,20 +31,20 @@ public class Device {
     //FRONTEND STUFF BELOW
     //this is all fun/useful stuff
     //it gets/sets all the info
-    public long getDevMacAdd() {
-        return devMacAddr;
+    public long getId() {
+        return id;
     }
 
-    public void setDevMacAdd(long macAdd) {
-        this.devMacAddr = macAdd;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public String getDeviceName() {
-        return deviceName;
+    public String getName() {
+        return name;
     }
 
-    public void setDeviceName(String name) {
-        this.deviceName = name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getGatewayName() {
@@ -58,8 +58,8 @@ public class Device {
     @Override
     public String toString() {
         return "Device{" +
-                "MacAddress=" + devMacAddr +
-                ", device name='" + deviceName +
+                "MacAddress=" + id +
+                ", device name='" + name +
                 ", gateway connected to='" + gatewayName+ '\''
                 + '}';
     }
