@@ -44,7 +44,7 @@ public class DeviceController {
         return deviceService.getDevices()
                //these are methods contained within the object
                 .stream()
-                .map(device -> new DeviceDto(device.getDevMacAdd(), device.getDeviceName(),
+                .map(device -> new DeviceDto(device.getId(), device.getName(),
                         device.getGatewayName()))
                 //this just gathers all the stuff to display it
                 .collect(Collectors.toList());
