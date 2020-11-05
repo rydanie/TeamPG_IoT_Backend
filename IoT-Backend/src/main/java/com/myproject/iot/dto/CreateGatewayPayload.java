@@ -2,14 +2,14 @@ package com.myproject.iot.dto;
 
 public class CreateGatewayPayload {
 
-    private String name;
+    private String GatewayName;
 
     public String getGatewayName() {
-        return name;
+        return GatewayName;
     }
 
     public void setGatewayName(String name) {
-        this.name = name;
+        this.GatewayName = name;
     }
 }
 

@@ -5,9 +5,9 @@ import com.myproject.iot.domain.Gateway;
 public class GatewayDto {
 
     //these are all the fields that are needed for the gateway
-    private long gateMacAddr;
+    private long gateId;
     private long ipAddress;
-    private String gatewayName;
+    private String GatewayName;
 
     public GatewayDto() {
 
@@ -16,33 +16,33 @@ public class GatewayDto {
     //FRONTEND STUFF BELOW
     //this is all fun/useful stuff
     //it gets/sets all the info
-    public GatewayDto(long macAdd, long ipAdd, String gateName) {
-        this.gateMacAddr = macAdd;
-        this.ipAddress = ipAdd;
-        this.gatewayName = gateName;
+    public GatewayDto(long macAdd, /*long ipAdd,*/ String gateName) {
+        this.gateId = macAdd;
+        //this.ipAddress = ipAdd;
+        this.GatewayName = gateName;
     }
 
-    public long getGateMacAddr() {
-        return gateMacAddr;
+    public long getGateMacId() {
+        return gateId;
     }
 
-    public void setGateMacAddr(long macAdd) {
-        this.gateMacAddr = macAdd;
+    public void setGateId(long macAdd) {
+        this.gateId = macAdd;
     }
 
-    public long getIpAddress() {
+    /*public long getIpAddress() {
         return ipAddress;
     }
 
     public void setIpAddress(long ipAdd) {
         this.ipAddress = ipAdd;
     }
-
+    */
     public String getGatewayNameName() {
-        return gatewayName;
+        return GatewayName;
     }
 
     public void setGatewayName(String name) {
-        this.gatewayName = name;
+        this.GatewayName = name;
     }
 }
