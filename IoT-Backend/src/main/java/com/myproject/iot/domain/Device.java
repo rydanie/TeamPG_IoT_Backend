@@ -1,41 +1,36 @@
 package com.myproject.iot.domain;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-//this tells the program this is a thing
 @Entity
 public class Device {
 
-    //when its looking for id it goes here
     @Id
-    //tells generated value to do stuff here
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     private String name;
-    private String gatewayName;
 
 
-    public Device(long id, String name, String gateName) {
+    public Device(Long id, String name) {
         this.id = id;
         this.name = name;
-        this.gatewayName = gateName;
     }
 
     public Device() {
 
     }
 
-    //FRONTEND STUFF BELOW
-    //this is all fun/useful stuff
-    //it gets/sets all the info
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -47,20 +42,13 @@ public class Device {
         this.name = name;
     }
 
-    public String getGatewayName() {
-        return gatewayName;
-    }
-
-    public void setGatewayName(String gateName) {
-        this.gatewayName = gateName;
-    }
-
     @Override
     public String toString() {
         return "Device{" +
-                "MacAddress=" + id +
-                ", device name='" + name +
-                ", gateway connected to='" + gatewayName+ '\''
-                + '}';
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
+
+
