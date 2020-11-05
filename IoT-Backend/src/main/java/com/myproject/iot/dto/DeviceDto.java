@@ -4,24 +4,21 @@ public class DeviceDto {
 
     private long id;
     private String name;
-    private String gatewayName;
 
     public DeviceDto() {
-
     }
 
-    public DeviceDto(long macAdd, String devName, String gateName) {
-        this.id = macAdd;
-        this.name = devName;
-        this.gatewayName = gateName;
+    public DeviceDto(long id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
     public long getId() {
         return id;
     }
 
-    public void setId(long macAdd) {
-        this.id = macAdd;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -30,13 +27,5 @@ public class DeviceDto {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getGatewayName() {
-        return gatewayName;
-    }
-
-    public void setGatewayName(String name) {
-        this.gatewayName = name;
     }
 }

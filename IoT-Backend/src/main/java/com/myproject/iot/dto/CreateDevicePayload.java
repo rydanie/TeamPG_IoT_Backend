@@ -4,11 +4,11 @@ public class CreateDevicePayload {
 
     private String name;
 
-    public String getDeviceName() {
+    public String getName() {
         return name;
     }
 
-    public void setDeviceName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 }
