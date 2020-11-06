@@ -30,7 +30,8 @@ public class Controller {
     public List<DeviceDto> getDevices() {
         return deviceService.getDevices()
                 .stream()
-                .map(device -> new DeviceDto(device.getId(), device.getName()))
+                .map(device -> new DeviceDto(device.getId(), device.getName(),
+                        device.getConName()))
                 .collect(Collectors.toList());
     }
 

@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+//this is what is stored inside the database
 @Entity
 public class Device {
 
@@ -15,11 +16,13 @@ public class Device {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+    private String conName;
 
 
-    public Device(Long id, String name) {
+    public Device(Long id, String name, String conName) {
         this.id = id;
         this.name = name;
+        this.conName = conName;
     }
 
     public Device() {
@@ -41,6 +44,10 @@ public class Device {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getConName() {return conName;}
+
+    public void setConName(String conName) {this.conName = conName;}
 
     @Override
     public String toString() {

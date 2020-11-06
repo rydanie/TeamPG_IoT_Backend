@@ -16,7 +16,7 @@ public class GatewayService {
 
     public Gateway addGateway(String name) {
         Gateway gateway = new Gateway();
-        gateway.setGatewayName(name);
+        gateway.setName(name);
         return gatewayRepository.save(gateway);
     }
 

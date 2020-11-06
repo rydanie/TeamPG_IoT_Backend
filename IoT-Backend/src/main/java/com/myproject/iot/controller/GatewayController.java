@@ -44,7 +44,7 @@ public class GatewayController {
         return gatewayService.getGateways()
                 //these are methods contained within the object
                 .stream()
-                .map(gateway -> new GatewayDto(gateway.getGateId(), gateway.getGatewayName()))
+                .map(gateway -> new GatewayDto(gateway.getId(), gateway.getName()))
                 //this just gathers all the stuff to display it
                 .collect(Collectors.toList());
     }
