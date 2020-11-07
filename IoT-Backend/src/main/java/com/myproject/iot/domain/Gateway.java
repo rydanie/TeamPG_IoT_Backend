@@ -66,7 +66,7 @@ public class Gateway {
         return macAdd;
     }
 
-    public void setMacAdd(String gateName) {
+    public void setMacAdd(String macAdd) {
         this.macAdd = macAdd;
     }
 

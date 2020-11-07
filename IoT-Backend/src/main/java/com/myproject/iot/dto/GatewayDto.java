@@ -28,8 +28,8 @@ public class GatewayDto {
         return id;
     }
 
-    public void setId(long macAdd) {
-        this.id = macAdd;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getIPAddress() {
@@ -52,7 +52,7 @@ public class GatewayDto {
         return macAdd;
     }
 
-    public void setMacAdd(String gateName) {
+    public void setMacAdd(String macAdd) {
         this.macAdd = macAdd;
     }
 }

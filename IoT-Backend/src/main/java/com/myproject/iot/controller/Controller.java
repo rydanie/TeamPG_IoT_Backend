@@ -23,7 +23,8 @@ public class Controller {
 
     @PostMapping("/")
     public ResponseEntity<Device> addDevice(@RequestBody CreateDevicePayload payload) {
-        return new ResponseEntity<>(deviceService.addDevice(payload.getName()), HttpStatus.CREATED);
+        return new ResponseEntity<>(deviceService.addDevice(payload.getName(), payload.getConName(),
+                payload.getConName()), HttpStatus.CREATED);
     }
 
     @GetMapping("/getDevices")
@@ -35,10 +36,9 @@ public class Controller {
                 .collect(Collectors.toList());
     }
 
-    // Exercise: add the code delete a device and test it, see DeviceRepository class
-    //when told to delete something it goes here
     @DeleteMapping("")
-    public void delete(@RequestParam(name = "id") long id) {
+    public void delete(@RequestParam(name = "id") long id){
         deviceRepository.deleteById(id);
     }
+
 }
