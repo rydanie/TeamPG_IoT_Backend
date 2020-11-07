@@ -28,7 +28,7 @@ public class GatewayController {
 
 
     //maps HTTP POST requests onto specific handlers
-    @PostMapping("/")
+    @PostMapping("/addGateway")
     public ResponseEntity<Gateway> addGateway(@RequestBody CreateGatewayPayload payload) {
         return new ResponseEntity<>(gatewayService.addGateway(payload.getGatewayName()), HttpStatus.CREATED);
     }
@@ -39,19 +39,20 @@ public class GatewayController {
     //}
 
     //this is part of the HTTP mapping and puts the GET requests on specific handler methods
-    @GetMapping("/")
+    @GetMapping("/getGateways")
     public List<GatewayDto> getGateways() {//this is getting the list of devices from Dto
         return gatewayService.getGateways()
                 //these are methods contained within the object
                 .stream()
-                .map(gateway -> new GatewayDto(gateway.getId(), gateway.getName()))
+                .map(gateway -> new GatewayDto(gateway.getId(), gateway.getName(),
+                        gateway.getIPAddress(), gateway.getMacAdd()))
                 //this just gathers all the stuff to display it
                 .collect(Collectors.toList());
     }
 
     //when told to delete something it goes here
     @DeleteMapping("")
-    public void delete(@RequestParam(name = "id") Long id) {
+    public void delete(@RequestParam(name = "id") long id) {
         gatewayRepository.deleteById(id);
     }
 
