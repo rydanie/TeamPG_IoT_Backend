@@ -19,7 +19,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.1\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -67,9 +67,26 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="466" y="132" key="FileChooserDialogImpl" timestamp="1601762387892">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="655" y="189" key="FileChooserDialogImpl" timestamp="1604768805015">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="466" y="132" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1601762387892" />
+    <state x="655" y="189" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604768805015" />
+    <state width="1877" height="278" key="GridCell.Tab.0.bottom" timestamp="1604777674796">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604777674796" />
+    <state width="1877" height="278" key="GridCell.Tab.0.center" timestamp="1604777674796">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604777674796" />
+    <state width="1877" height="278" key="GridCell.Tab.0.left" timestamp="1604777674796">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604777674796" />
+    <state width="1877" height="278" key="GridCell.Tab.0.right" timestamp="1604777674796">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604777674796" />
   </component>
 </project>

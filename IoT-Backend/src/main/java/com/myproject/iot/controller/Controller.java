@@ -21,7 +21,7 @@ public class Controller {
     private DeviceService deviceService;
     private DeviceRepository deviceRepository;
 
-    @PostMapping("/")
+    @PostMapping("/addDevice")
     public ResponseEntity<Device> addDevice(@RequestBody CreateDevicePayload payload) {
         return new ResponseEntity<>(deviceService.addDevice(payload.getName(), payload.getConName(),
                 payload.getConName()), HttpStatus.CREATED);
