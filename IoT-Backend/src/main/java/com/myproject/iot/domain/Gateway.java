@@ -15,16 +15,18 @@ public class Gateway {
     @GeneratedValue(strategy = GenerationType.AUTO)
 
     //these are all the fields that are needed for the gateway
-    private Long id;
-    private Long ipAddress;
+    private long id;
+    private String ipAddress;
     private String name;
+    private String macAdd;
 
     //this is the actual gateway class, what the program thinks of
     //when it sees gateway
-    public Gateway(Long macAdd, /*Long ipAdd,*/ String gateName) {
-        this.id = macAdd;
-        //this.ipAddress = ipAdd;
+    public Gateway(long id, String ipAdd, String gateName, String macAdd) {
+        this.id = id;
+        this.ipAddress = ipAdd;
         this.name = gateName;
+        this.macAdd = macAdd;
     }
 
     //this tells the program gateway itself doesn't do anything,
@@ -44,13 +46,13 @@ public class Gateway {
         this.id = macAdd;
     }
 
-    /*public long getIPAddress() {
+    public String getIPAddress() {
         return ipAddress;
-    }*/
+    }
 
-    /*public void setIpAddress(long ipAdd) {
+    public void setIpAddress(String  ipAdd) {
         this.ipAddress = ipAdd;
-    }*/
+    }
 
     public String getName() {
         return name;
@@ -58,6 +60,14 @@ public class Gateway {
 
     public void setName(String gateName) {
         this.name = gateName;
+    }
+
+    public String getMacAdd() {
+        return macAdd;
+    }
+
+    public void setMacAdd(String gateName) {
+        this.macAdd = macAdd;
     }
 
 }

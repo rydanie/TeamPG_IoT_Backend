@@ -14,14 +14,16 @@ public class Device {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private long id;
+    private String macAdd;
     private String name;
     private String conName;
 
 
-    public Device(Long id, String name, String conName) {
+    public Device(Long id, String name, String macAdd, String conName) {
         this.id = id;
         this.name = name;
+        this.macAdd = macAdd;
         this.conName = conName;
     }
 
@@ -29,12 +31,20 @@ public class Device {
 
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
+    }
+
+    public String getMacAdd() {
+        return macAdd;
+    }
+
+    public void setMacAdd(String macAdd) {
+        this.macAdd = macAdd;
     }
 
     public String getName() {

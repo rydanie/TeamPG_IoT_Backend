@@ -6,8 +6,9 @@ public class GatewayDto {
 
     //these are all the fields that are needed for the gateway
     private long id;
-    private long ipAddress;
+    private String ipAddress;
     private String name;
+    private String macAdd;
 
     public GatewayDto() {
 
@@ -16,33 +17,42 @@ public class GatewayDto {
     //FRONTEND STUFF BELOW
     //this is all fun/useful stuff
     //it gets/sets all the info
-    public GatewayDto(long macAdd, /*long ipAdd,*/ String gateName) {
-        this.id = macAdd;
-        //this.ipAddress = ipAdd;
+    public GatewayDto(long id, String ipAdd, String gateName, String macAdd) {
+        this.id = id;
+        this.ipAddress = ipAdd;
         this.name = gateName;
+        this.macAdd = macAdd;
     }
 
-    public long getGateMacId() {
+    public long getId() {
         return id;
     }
 
-    public void setGateId(long macAdd) {
+    public void setId(long macAdd) {
         this.id = macAdd;
     }
 
-    /*public long getIpAddress() {
+    public String getIPAddress() {
         return ipAddress;
     }
 
-    public void setIpAddress(long ipAdd) {
+    public void setIpAddress(String  ipAdd) {
         this.ipAddress = ipAdd;
     }
-    */
-    public String getGatewayNameName() {
+
+    public String getName() {
         return name;
     }
 
-    public void setGatewayName(String name) {
-        this.name = name;
+    public void setName(String gateName) {
+        this.name = gateName;
+    }
+
+    public String getMacAdd() {
+        return macAdd;
+    }
+
+    public void setMacAdd(String gateName) {
+        this.macAdd = macAdd;
     }
 }

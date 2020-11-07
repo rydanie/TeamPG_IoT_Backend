@@ -4,7 +4,8 @@ public class CreateDevicePayload {
 
     private String name;
     private String conName;
-    private Long id;
+    private String macAdd;
+    private long id;
 
     public String getName() {
         return name;
@@ -12,13 +13,23 @@ public class CreateDevicePayload {
 
     public String getConName() {return conName;}
 
-    public Long getId() {
+    public String getMacAdd() {
+        return macAdd;
+    }
+
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
+
+    public  String getName(String name){return name;}
+
+    public  String getMacAdd(String macAdd){return macAdd;}
+
+    public  String getConName(String conName){return conName;}
 
     public void setName(String name) {
         this.name = name;
@@ -26,5 +37,9 @@ public class CreateDevicePayload {
 
     public void setConName(String conName) {
         this.conName = conName;
+    }
+
+    public void setMacAdd(String macAdd) {
+        this.macAdd = macAdd;
     }
 }

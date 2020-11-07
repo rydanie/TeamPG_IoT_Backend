@@ -3,15 +3,17 @@ package com.myproject.iot.dto;
 public class DeviceDto {
 
     private long id;
+    private String macAdd;
     private String name;
     private String conName;
 
     public DeviceDto() {
     }
 
-    public DeviceDto(long id, String name, String conName) {
+    public DeviceDto(long id, String name,  String macAdd, String conName) {
         this.id = id;
         this.name = name;
+        this.macAdd = macAdd;
         this.conName = conName;
     }
 
@@ -34,4 +36,8 @@ public class DeviceDto {
     public String getConName() {return conName;}
 
     public void setConName(String conName) {this.conName = conName;}
+
+    public String getMacAdd(){return macAdd;}
+
+    public void setMacAdd(String macAdd){this.macAdd = macAdd;}
 }

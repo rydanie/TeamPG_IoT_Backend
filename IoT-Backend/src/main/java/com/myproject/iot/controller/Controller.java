@@ -26,11 +26,11 @@ public class Controller {
         return new ResponseEntity<>(deviceService.addDevice(payload.getName()), HttpStatus.CREATED);
     }
 
-    @GetMapping("/")
+    @GetMapping("/getDevices")
     public List<DeviceDto> getDevices() {
         return deviceService.getDevices()
                 .stream()
-                .map(device -> new DeviceDto(device.getId(), device.getName(),
+                .map(device -> new DeviceDto(device.getId(), device.getName(), device.getMacAdd(),
                         device.getConName()))
                 .collect(Collectors.toList());
     }
@@ -38,7 +38,7 @@ public class Controller {
     // Exercise: add the code delete a device and test it, see DeviceRepository class
     //when told to delete something it goes here
     @DeleteMapping("")
-    public void delete(@RequestParam(name = "id") Long id) {
+    public void delete(@RequestParam(name = "id") long id) {
         deviceRepository.deleteById(id);
     }
 }
