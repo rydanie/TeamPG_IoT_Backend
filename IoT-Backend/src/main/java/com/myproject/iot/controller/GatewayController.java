@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;//this im
 
-//this is navigation stuff I think - Duncan
+//this is navigation stuff
 @RestController
 @RequestMapping("/Gateways")
 
@@ -28,7 +28,7 @@ public class GatewayController {
 
 
     //maps HTTP POST requests onto specific handlers
-    @PostMapping("/addGateway")
+    @PostMapping("/")
     public ResponseEntity<Gateway> addGateway(@RequestBody CreateGatewayPayload payload) {
         return new ResponseEntity<>(gatewayService.addGateway(payload.getGatewayName()), HttpStatus.CREATED);
     }

@@ -18,7 +18,7 @@ public class GatewayService {
         Gateway gateway = new Gateway();
         gateway.setName(name);
         gateway.setMacAdd("Hi");
-        gateway.setIpAddress("Sharbel's Van");
+        gateway.setIpAddress("Ice Cream Van");
         return gatewayRepository.save(gateway);
     }
 
