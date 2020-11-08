@@ -25,10 +25,7 @@ public class DeviceService {
         return deviceRepository.findAll();
     }
 
-    /*This is where we should be deleting bu the other one works
-    public void deleteDevice(Long deleteId){
-        Device device = deviceRepository.getOne(deleteId);
-        deviceRepository.delete(device);
+    public void deleteDevice(long id){
+
     }
-     */
 }
