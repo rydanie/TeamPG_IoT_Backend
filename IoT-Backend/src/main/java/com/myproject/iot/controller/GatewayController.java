@@ -30,8 +30,7 @@ public class GatewayController {
     //maps HTTP POST requests onto specific handlers
     @PostMapping("/")
     public ResponseEntity<Gateway> addGateway(@RequestBody CreateGatewayPayload payload) {
-        return new ResponseEntity<>(gatewayService.addGateway(payload.getGatewayName(), payload.getMacAdd(),
-                payload.getIpAdd()), HttpStatus.CREATED);
+        return new ResponseEntity<>(gatewayService.addGateway(payload.getGatewayName()), HttpStatus.CREATED);
     }
 
     //@GetMapping("")
@@ -45,8 +44,8 @@ public class GatewayController {
         return gatewayService.getGateways()
                 //these are methods contained within the object
                 .stream()
-                .map(gateway -> new GatewayDto(gateway.getId(), gateway.getGatewayName(),
-                        gateway.getMacAdd(), gateway.getIPAddress()))
+                .map(gateway -> new GatewayDto(gateway.getId(), gateway.getName(),
+                        gateway.getIPAddress(), gateway.getMacAdd()))
                 //this just gathers all the stuff to display it
                 .collect(Collectors.toList());
     }

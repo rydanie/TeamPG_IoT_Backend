@@ -1,8 +1,5 @@
 package com.myproject.iot.domain;
 
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,11 +22,11 @@ public class Gateway {
 
     //this is the actual gateway class, what the program thinks of
     //when it sees gateway
-    public Gateway(long id, String gateName, String macAdd, String ipAdd) {
+    public Gateway(long id, String ipAdd, String gateName, String macAdd) {
         this.id = id;
+        this.ipAddress = ipAdd;
         this.name = gateName;
         this.macAdd = macAdd;
-        this.ipAddress = ipAdd;
     }
 
     //this tells the program gateway itself doesn't do anything,
@@ -57,11 +54,11 @@ public class Gateway {
         this.ipAddress = ipAdd;
     }
 
-    public String getGatewayName() {
+    public String getName() {
         return name;
     }
 
-    public void setGatewayName(String gateName) {
+    public void setName(String gateName) {
         this.name = gateName;
     }
 
@@ -73,11 +70,4 @@ public class Gateway {
         this.macAdd = macAdd;
     }
 
-    @Override
-    public String toString() {
-        return "Gateway{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }
