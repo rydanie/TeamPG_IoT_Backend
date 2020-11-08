@@ -36,7 +36,7 @@ public class Controller {
                 .collect(Collectors.toList());
     }
 
-    @DeleteMapping("")
+    @DeleteMapping("/deleteDevices")
     public void delete(@RequestParam(name = "id") long id){
         deviceRepository.deleteById(id);
     }
