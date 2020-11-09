@@ -17,11 +17,11 @@ public class GatewayDto {
     //FRONTEND STUFF BELOW
     //this is all fun/useful stuff
     //it gets/sets all the info
-    public GatewayDto(long id, String gateName/*, String macAdd, String ipAdd*/) {
+    public GatewayDto(long id, String gateName, String macAdd, String ipAdd) {
         this.id = id;
+        this.ipAddress = ipAdd;
         this.name = gateName;
-        this.ipAddress = "Kevin has a life";
-        this.macAdd = "Help";
+        this.macAdd = macAdd;
     }
 
     public long getId() {
