@@ -1,5 +1,5 @@
 package com.myproject.iot.dto;
-
+//comment
 import com.myproject.iot.domain.Gateway;
 
 public class GatewayDto {
