@@ -16,8 +16,7 @@ import java.util.stream.Collectors;//this im
 
 //this is navigation stuff
 @RestController
-@RequestMapping("/Gateways")
-
+@RequestMapping("/gateways")
 public class GatewayController {
     //order of mapping HTTP things doesn't matter as long as they are mapped before they are used
 
@@ -30,7 +29,8 @@ public class GatewayController {
     //maps HTTP POST requests onto specific handlers
     @PostMapping("/")
     public ResponseEntity<Gateway> addGateway(@RequestBody CreateGatewayPayload payload) {
-        return new ResponseEntity<>(gatewayService.addGateway(payload.getGatewayName()), HttpStatus.CREATED);
+        return new ResponseEntity<>(gatewayService.addGateway(payload.getName(),
+                payload.getIpAdd(),payload.getMacAdd() ), HttpStatus.CREATED);
     }
 
     //@GetMapping("")
@@ -39,7 +39,7 @@ public class GatewayController {
     //}
 
     //this is part of the HTTP mapping and puts the GET requests on specific handler methods
-    @GetMapping("/getGateways")
+    @GetMapping("/getgateways")
     public List<GatewayDto> getGateways() {//this is getting the list of devices from Dto
         return gatewayService.getGateways()
                 //these are methods contained within the object

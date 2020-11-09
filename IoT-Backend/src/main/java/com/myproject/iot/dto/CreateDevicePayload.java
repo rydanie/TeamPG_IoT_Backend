@@ -7,9 +7,7 @@ public class CreateDevicePayload {
     private String macAdd;
     private long id;
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
     public String getConName() {return conName;}
 
@@ -24,12 +22,6 @@ public class CreateDevicePayload {
     public void setId(long id) {
         this.id = id;
     }
-
-    public  String getName(String name){return name;}
-
-    public  String getMacAdd(String macAdd){return macAdd;}
-
-    public  String getConName(String conName){return conName;}
 
     public void setName(String name) {
         this.name = name;

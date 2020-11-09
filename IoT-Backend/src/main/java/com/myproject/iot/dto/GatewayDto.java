@@ -1,6 +1,4 @@
 package com.myproject.iot.dto;
-//comment
-import com.myproject.iot.domain.Gateway;
 
 public class GatewayDto {
 
@@ -17,10 +15,10 @@ public class GatewayDto {
     //FRONTEND STUFF BELOW
     //this is all fun/useful stuff
     //it gets/sets all the info
-    public GatewayDto(long id, String ipAdd, String gateName, String macAdd) {
+    public GatewayDto(long id, String name, String ipAdd, String macAdd) {
         this.id = id;
         this.ipAddress = ipAdd;
-        this.name = gateName;
+        this.name = name;
         this.macAdd = macAdd;
     }
 
@@ -44,8 +42,8 @@ public class GatewayDto {
         return name;
     }
 
-    public void setName(String gateName) {
-        this.name = gateName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getMacAdd() {

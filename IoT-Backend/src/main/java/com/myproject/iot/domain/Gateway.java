@@ -23,10 +23,10 @@ public class Gateway {
 
     //this is the actual gateway class, what the program thinks of
     //when it sees gateway
-    public Gateway(long id, String ipAdd, String gateName, String macAdd) {
+    public Gateway(long id, String name, String ipAdd, String macAdd) {
         this.id = id;
         this.ipAddress = ipAdd;
-        this.name = gateName;
+        this.name = name;
         this.macAdd = macAdd;
     }
 
@@ -59,8 +59,8 @@ public class Gateway {
         return name;
     }
 
-    public void setName(String gateName) {
-        this.name = gateName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getMacAdd() {
