@@ -23,7 +23,7 @@ public class Controller {
 
     @PostMapping("/")
     public ResponseEntity<Device> addDevice(@RequestBody CreateDevicePayload payload) {
-        return new ResponseEntity<>(deviceService.addDevice(payload.getName(), payload.getConName(),
+        return new ResponseEntity<>(deviceService.addDevice(payload.getName(), payload.getMacAdd(),
                 payload.getConName()), HttpStatus.CREATED);
     }
 
