@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e74d993-8b45-45b7-a030-a9e87a42dba6" name="Default Changelist" comment="" />
+    <list default="true" id="6e74d993-8b45-45b7-a030-a9e87a42dba6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IoT-Backend/src/main/java/com/myproject/iot/controller/GatewayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/IoT-Backend/src/main/java/com/myproject/iot/controller/GatewayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IoT-Backend/src/main/java/com/myproject/iot/domain/Gateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/IoT-Backend/src/main/java/com/myproject/iot/domain/Gateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IoT-Backend/src/main/java/com/myproject/iot/dto/GatewayDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/IoT-Backend/src/main/java/com/myproject/iot/dto/GatewayDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IoT-Backend/src/main/java/com/myproject/iot/service/GatewayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/IoT-Backend/src/main/java/com/myproject/iot/service/GatewayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IoT-Backend/target/classes/com/myproject/iot/IotApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/IoT-Backend/target/classes/com/myproject/iot/IotApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IoT-Backend/target/classes/com/myproject/iot/domain/Gateway.class" beforeDir="false" afterPath="$PROJECT_DIR$/IoT-Backend/target/classes/com/myproject/iot/domain/Gateway.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +28,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.1\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="C:\Program Files (x86)\IntelliJ IDEA Educational Edition 2020.2.1\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -34,6 +43,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TeamPG_IoT_Frontend" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
     <configuration name="IotApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -67,9 +79,30 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="466" y="132" key="FileChooserDialogImpl" timestamp="1601762387892">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="249" y="0" key="#Project_Structure" timestamp="1604881613317">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1604881613317" />
+    <state x="524" y="149" key="FileChooserDialogImpl" timestamp="1604881862628">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="466" y="132" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1601762387892" />
+    <state x="524" y="149" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604881862628" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1604884479165">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604884479165" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1604884479164">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604884479164" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1604884479163">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604884479163" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1604884479164">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604884479164" />
   </component>
 </project>

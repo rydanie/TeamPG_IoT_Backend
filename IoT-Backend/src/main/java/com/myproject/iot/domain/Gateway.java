@@ -26,11 +26,11 @@ public class Gateway {
 
     //this is the actual gateway class, what the program thinks of
     //when it sees gateway
-    public Gateway(long id, String gateName, String macAdd, String ipAdd) {
+    public Gateway(long id, String gateName/*, String macAdd, String ipAdd*/) {
         this.id = id;
         this.name = gateName;
-        this.macAdd = macAdd;
-        this.ipAddress = ipAdd;
+        //this.macAdd = macAdd;
+        //this.ipAddress = ipAdd;
     }
 
     //this tells the program gateway itself doesn't do anything,
