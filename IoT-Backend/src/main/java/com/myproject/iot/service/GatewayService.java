@@ -14,11 +14,11 @@ public class GatewayService {
     @Autowired//creates gateway repository instance
     private GatewayRepository gatewayRepository;
 
-    public Gateway addGateway(String name/*, String mac, String ip*/) {
+    public Gateway addGateway(String name, String macAdd, String ip) {
         Gateway gateway = new Gateway();
-        gateway.setName(name);
-        gateway.setMacAdd("Hi");
-        gateway.setIpAddress("Ice Cream Van");
+        gateway.setGatewayName(name);
+        gateway.setMacAdd(macAdd);
+        gateway.setIpAddress(ip);
         return gatewayRepository.save(gateway);
     }
 

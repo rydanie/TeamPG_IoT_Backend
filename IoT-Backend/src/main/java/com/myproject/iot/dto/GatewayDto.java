@@ -17,7 +17,7 @@ public class GatewayDto {
     //FRONTEND STUFF BELOW
     //this is all fun/useful stuff
     //it gets/sets all the info
-    public GatewayDto(long id, String ipAdd, String gateName, String macAdd) {
+    public GatewayDto(long id, String gateName, String macAdd, String ipAdd) {
         this.id = id;
         this.ipAddress = ipAdd;
         this.name = gateName;
@@ -40,11 +40,11 @@ public class GatewayDto {
         this.ipAddress = ipAdd;
     }
 
-    public String getName() {
+    public String getGatewayName() {
         return name;
     }
 
-    public void setName(String gateName) {
+    public void setGatewayName(String gateName) {
         this.name = gateName;
     }
 
