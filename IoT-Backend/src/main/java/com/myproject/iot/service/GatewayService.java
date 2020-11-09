@@ -1,5 +1,5 @@
 package com.myproject.iot.service;
-
+//comment
 //import all the things
 import com.myproject.iot.domain.Gateway;
 import com.myproject.iot.repository.GatewayRepository;

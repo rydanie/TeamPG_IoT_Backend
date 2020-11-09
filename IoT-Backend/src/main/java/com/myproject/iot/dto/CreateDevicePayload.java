@@ -1,5 +1,5 @@
 package com.myproject.iot.dto;
-
+//comment
 public class CreateDevicePayload {
 
     private String name;

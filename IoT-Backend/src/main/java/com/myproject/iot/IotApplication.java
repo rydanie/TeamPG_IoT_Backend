@@ -1,6 +1,7 @@
 package com.myproject.iot;
 //new comment
 //comment part 2
+//comment
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

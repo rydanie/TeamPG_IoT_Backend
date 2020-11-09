@@ -1,5 +1,5 @@
 package com.myproject.iot.dto;
-
+//comment
 public class DeviceDto {
 
     private long id;
