@@ -13,11 +13,11 @@ public class DeviceService {
     @Autowired
     private DeviceRepository deviceRepository;
 
-    public Device addDevice(String name, String macAdd, String con) {
+    public Device addDevice(String name, String macAdd, String conName) {
         Device device = new Device();
         device.setName(name);
         device.setMacAdd(macAdd);
-        device.setConName(con);
+        device.setConName(conName);
         return deviceRepository.save(device);
     }
 
