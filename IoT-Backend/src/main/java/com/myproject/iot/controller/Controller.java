@@ -1,5 +1,5 @@
 package com.myproject.iot.controller;
-
+//comment
 import com.myproject.iot.domain.Device;
 import com.myproject.iot.dto.CreateDevicePayload;
 import com.myproject.iot.dto.DeviceDto;
@@ -36,7 +36,7 @@ public class Controller {
                 .collect(Collectors.toList());
     }
 
-    @DeleteMapping("")
+    @DeleteMapping("/deleteDevices")
     public void delete(@RequestParam(name = "id") long id){
         deviceRepository.deleteById(id);
     }

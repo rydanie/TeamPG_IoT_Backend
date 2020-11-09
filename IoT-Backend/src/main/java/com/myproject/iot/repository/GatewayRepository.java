@@ -1,5 +1,5 @@
 package com.myproject.iot.repository;
-
+//comment
 //imports all the stuff
 import com.myproject.iot.domain.Gateway;
 import org.springframework.data.jpa.repository.JpaRepository;

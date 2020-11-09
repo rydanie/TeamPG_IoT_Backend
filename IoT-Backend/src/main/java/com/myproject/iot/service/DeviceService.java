@@ -1,5 +1,5 @@
 package com.myproject.iot.service;
-
+//comment
 import com.myproject.iot.domain.Device;
 import com.myproject.iot.repository.DeviceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +13,11 @@ public class DeviceService {
     @Autowired
     private DeviceRepository deviceRepository;
 
-    public Device addDevice(String name, String macAdd, String con) {
+    public Device addDevice(String name, String macAdd, String conName) {
         Device device = new Device();
         device.setName(name);
         device.setMacAdd(macAdd);
-        device.setConName(con);
+        device.setConName(conName);
         return deviceRepository.save(device);
     }
 
@@ -25,10 +25,7 @@ public class DeviceService {
         return deviceRepository.findAll();
     }
 
-    /*This is where we should be deleting bu the other one works
-    public void deleteDevice(Long deleteId){
-        Device device = deviceRepository.getOne(deleteId);
-        deviceRepository.delete(device);
+    public void deleteDevice(long id){
+
     }
-     */
 }
