@@ -22,6 +22,10 @@ public class GatewayService {
         return gatewayRepository.save(gateway);
     }
 
+    public void deleteGateway(Long id){
+        gatewayRepository.deleteById(id);
+    }
+
     public List<Gateway> getGateways() {
         return gatewayRepository.findAll();
     }

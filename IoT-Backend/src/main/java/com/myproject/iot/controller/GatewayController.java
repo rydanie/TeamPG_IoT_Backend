@@ -51,9 +51,10 @@ public class GatewayController {
     }
 
     //when told to delete something it goes here
-    @DeleteMapping("")
-    public void delete(@RequestParam(name = "id") long id) {
-        gatewayRepository.deleteById(id);
+    @DeleteMapping("/deleteGateways/{id}")
+    public ResponseEntity<String> deleteDevice(@PathVariable Long id){
+        gatewayService.deleteGateway(id);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }
