@@ -36,9 +36,10 @@ public class Controller {
                 .collect(Collectors.toList());
     }
 
-    @DeleteMapping("/deleteDevices")
-    public void delete(@RequestParam(name = "id") long id){
-        deviceRepository.deleteById(id);
+    @DeleteMapping("/deleteDevices/{id}")
+   public ResponseEntity<String> deleteDevice(@PathVariable Long id){
+        deviceService.deleteDevice(id);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }

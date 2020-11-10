@@ -25,7 +25,7 @@ public class DeviceService {
         return deviceRepository.findAll();
     }
 
-    public void deleteDevice(long id){
-
+    public void deleteDevice(Long id){
+        deviceRepository.deleteById(id);
     }
 }
