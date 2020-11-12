@@ -27,6 +27,12 @@ public class Controller {
                 payload.getConName()), HttpStatus.CREATED);
     }
 
+    @PutMapping("/editDevivce/")
+    public ResponseEntity<Device> editDevice(@RequestBody CreateDevicePayload payload) {
+        return new ResponseEntity<>(deviceService.editDevice(payload.getId(), payload.getName(),
+                payload.getMacAdd(), payload.getConName()), HttpStatus.CREATED);
+    }
+
     @GetMapping("/getDevices")
     public List<DeviceDto> getDevices() {
         return deviceService.getDevices()
@@ -41,5 +47,12 @@ public class Controller {
         deviceService.deleteDevice(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @GetMapping("/getDevice/{id}")
+    public ResponseEntity<String> getDevice(@PathVariable Long id){
+        deviceService.getDevice(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 
 }

@@ -28,4 +28,17 @@ public class DeviceService {
     public void deleteDevice(Long id){
         deviceRepository.deleteById(id);
     }
+
+    public Device getDevice(Long id){
+        return deviceRepository.getOne(id);
+    }
+
+    public Device editDevice(long id, String name, String macAdd, String conName){
+        Device device = new Device();
+        device.setId(id);
+        device.setName(name);
+        device.setMacAdd(macAdd);
+        device.setConName(conName);
+        return deviceRepository.save(device);
+    }
 }
