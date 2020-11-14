@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DeviceService {
@@ -30,7 +31,17 @@ public class DeviceService {
     }
 
     public Device getDevice(Long id){
-        return deviceRepository.getOne(id);
+        Optional<Device> optionalDevice = deviceRepository.findById(id);
+        if(optionalDevice.isPresent()){
+            return optionalDevice.get();
+        }
+        else{
+            return new Device();
+        }
+    }
+
+    public Device save(Device device){
+        return deviceRepository.save(device);
     }
 
     public Device editDevice(long id, String name, String macAdd, String conName){
