@@ -1,7 +1,9 @@
 package com.myproject.iot.controller;
 //comment
 //this imports eveything we need
+import com.myproject.iot.domain.Device;
 import com.myproject.iot.domain.Gateway;
+import com.myproject.iot.dto.CreateDevicePayload;
 import com.myproject.iot.dto.CreateGatewayPayload;
 import com.myproject.iot.dto.GatewayDto;
 import com.myproject.iot.service.GatewayService;
@@ -57,4 +59,14 @@ public class GatewayController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    //this mapping is for putting something in a specific place
+    @PutMapping("/editGateway")
+    public ResponseEntity<Gateway> editGateway(@RequestBody CreateGatewayPayload payload) {
+        Gateway gateway = gatewayService.getGateway(payload.getId());
+        gateway.setIpAddress(payload.getIpAdd());
+        gateway.setMacAdd(payload.getMacAdd());
+        gateway.setName(payload.getName());
+        return ResponseEntity.ok(gatewayService.save(gateway));
+
+    }
 }
