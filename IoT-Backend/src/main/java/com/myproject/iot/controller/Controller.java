@@ -21,20 +21,21 @@ public class Controller {
     private DeviceService deviceService;
     private DeviceRepository deviceRepository;
 
-    @PostMapping("/")
-    public ResponseEntity<Device> addDevice(@RequestBody CreateDevicePayload payload) {
-        return new ResponseEntity<>(deviceService.addDevice(payload.getName(), payload.getMacAdd(),
-                payload.getConName()), HttpStatus.CREATED);
-    }
-
-    @PutMapping("/editDevice")
+    @PostMapping("/editDevice")
     public ResponseEntity<Device> editDevice(@RequestBody CreateDevicePayload payload) {
         Device device = deviceService.getDevice(payload.getId());
         device.setConName(payload.getConName());
         device.setMacAdd(payload.getMacAdd());
         device.setName(payload.getName());
         return ResponseEntity.ok(deviceService.save(device));
+    }
 
+    @GetMapping("/getDeviceById/{id}")
+    public ResponseEntity<Device> getDeviceById(@PathVariable Long id/*,
+            @RequestBody CreateDevicePayload payload*/){
+        Device device = deviceService.getDevice(id);
+
+        return  ResponseEntity.ok(device);
     }
 
     @GetMapping("/getDevices")
