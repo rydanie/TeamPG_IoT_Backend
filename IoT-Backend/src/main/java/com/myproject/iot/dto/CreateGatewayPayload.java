@@ -17,7 +17,7 @@ public class CreateGatewayPayload {
 
     public void setMacAdd(String macAdd) { this.macAdd = macAdd; }
 
-    public void setIpAdd(String ipAdd) { this.ipAdd = ipAdd; }
+    public void setIpAddress(String ipAdd) { this.ipAdd = ipAdd; }
 
     public long getId() { return id; }
 
