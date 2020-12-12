@@ -56,6 +56,7 @@ public class GatewayController {
     @DeleteMapping("/deleteGateways/{id}")
     public ResponseEntity<String> deleteDevice(@PathVariable Long id){
         gatewayService.deleteGateway(id);
+
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
