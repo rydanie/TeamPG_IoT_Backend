@@ -21,7 +21,7 @@ public class Controller {
     private DeviceService deviceService;
     private DeviceRepository deviceRepository;
 
-    @PostMapping("/editDevice")
+    @PutMapping("/editDevice")
     public ResponseEntity<Device> editDevice(@RequestBody CreateDevicePayload payload) {
         Device device = deviceService.getDevice(payload.getId());
         device.setConName(payload.getConName());
