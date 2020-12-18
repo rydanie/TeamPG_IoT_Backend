@@ -35,11 +35,6 @@ public class GatewayController {
                 payload.getIpAdd(),payload.getMacAdd() ), HttpStatus.CREATED);
     }
 
-    //@GetMapping("")
-    //public List<Router> getAll() {
-    //    return routerRepository.findAll();
-    //}
-
     //this is part of the HTTP mapping and puts the GET requests on specific handler methods
     @GetMapping("/getgateways")
     public List<GatewayDto> getGateways() {//this is getting the list of devices from Dto
@@ -66,6 +61,7 @@ public class GatewayController {
         Gateway gateway = gatewayService.getGateway(payload.getId());
         gateway.setIpAddress(payload.getIpAdd());
         gateway.setMacAdd(payload.getMacAdd());
+        gatewayService.changeDevice(payload.getName(), payload.getId());
         gateway.setName(payload.getName());
         return ResponseEntity.ok(gatewayService.save(gateway));
 
