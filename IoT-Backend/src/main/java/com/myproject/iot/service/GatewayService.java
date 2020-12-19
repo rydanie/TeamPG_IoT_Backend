@@ -28,6 +28,17 @@ public class GatewayService {
         return gatewayRepository.save(gateway);
     }
 
+    public void changeDevice(String nameGiven, Long id){
+        Gateway holdGateway = getGateway(id);
+        List<Device> connectedDevices = deviceRepository.findByConName(holdGateway.getName());
+
+        for(int i = 0; i < connectedDevices.size(); i++) {
+            Device holdDevice = connectedDevices.get(i);
+            holdDevice.setConName(nameGiven);
+            deviceRepository.save(holdDevice);
+        }
+    }
+
     public void deleteGateway(Long id){
         Gateway holdGateway = getGateway(id);
         List<Device> connectedDevices = deviceRepository.findByConName(holdGateway.getName());
